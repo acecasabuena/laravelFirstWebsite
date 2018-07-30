@@ -42,3 +42,8 @@ Route::get('/middleware/{age}',function($age){
 	return view('age', array('age'=>$age));
 });
 
+Route::get('/pages/contact', 'PagesController@contactPage');
+
+
+
+Route::get('/pages/middleware/{age}', 'PagesController@middlewareAgePage');
