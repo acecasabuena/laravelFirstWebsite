@@ -21,6 +21,30 @@ class PagesController extends Controller
     }
 
 
+    public function shoutoutPage(Request $request){
+
+    	$text = $request->text;
+    	$colors = array(
+
+    	  "red" =>"for passion",
+    	"green" => "color of nature",
+
+
+
+
+
+    	);
+
+    	return view('shoutout', array(
+    			'text' =>$text,
+    			'colors' =>$colors
+
+    	));
+
+
+
+
+    }
     	
     
 
