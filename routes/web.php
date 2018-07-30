@@ -1,6 +1,15 @@
 <?php
 
 
+
+
+
+Route::get('/home',function(){
+	return view('home');
+})->name('home');
+
+
+
 Route::get('/foo',function(){
 	return view('foo');
 })->name('foo');
@@ -27,3 +36,9 @@ Route::get('/basic-arithmetic/{operator?}/{number1?}/{number2?}', function($oper
 Route::get('/dasdasddsda',function(){
 	return view('dasdasddsda');
 })->name('dasdasddsda');
+
+
+Route::get('/middleware/{age}',function($age){
+	return view('age', array('age'=>$age));
+});
+
