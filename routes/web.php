@@ -50,3 +50,5 @@ Route::get('/pages/middleware/{age}', 'PagesController@middlewareAgePage');
 
 
 Route::get('pages/shoutout/{text}', 'PagesController@shoutoutPage')->name('shoutout');
+
+Route::get('/crushes', 'CrushesController@index');
