@@ -4,9 +4,9 @@
 
 
 
-Route::get('/home',function(){
-	return view('home');
-})->name('home');
+Route::get('/',function(){
+	return view('welcome');
+})->name('index');
 
 
 
@@ -51,4 +51,18 @@ Route::get('/pages/middleware/{age}', 'PagesController@middlewareAgePage');
 
 Route::get('pages/shoutout/{text}', 'PagesController@shoutoutPage')->name('shoutout');
 
-Route::get('/crushes', 'CrushesController@index');
+Route::get('/crushes', 'CrushesController@index')
+->name('crushes.index');
+
+
+Route::get('/crushes/create', 'CrushesController@create')->name('crushes.create');
+
+
+Route::post('/crushes/store', 'CrushesController@store')->name('crushes.store');
+
+
+Route::get('/crushes/{id}/edit', 'CrushesController@edit')->name('crushes.id.edit');
+
+Route::post('/crushes/{id}/update', 'CrushesController@update')->name('crushes.id.update');
+
+Route::get('/crushes/{id}/destroy', 'CrushesController@destroy')->name('crushes.id.destroy');

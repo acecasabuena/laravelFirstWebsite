@@ -7,14 +7,22 @@
 			<td>Contact Number</td>
 		</tr>
 	</thead>
-	</tbody>
+	<tbody>
 	@foreach($crushes as $crush)
 		<tr>
 			<td>{{ $crush->first_name        }}</td>
 			<td>{{ $crush->last_name         }}</td>
-			<td><a href="{{$crush->fb_profile_link}}">{{ $crush->fb_profile_link   }}</td>
+			<td>{{ $crush->fb_profile_link   }}</td>
 			<td>{{ $crush->contact_number    }}</td>
+			<td><a href ="{{  route('crushes.id.edit', array('id'=>$crush->id))  }}">Edit</a><a href=" {{ route('crushes.id.destroy', array('id'=>$crush->id))   }}">Delete</a></td>
+
 		</tr>
 	@endforeach
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td><a href="{{ route('crushes.create') }}">Add New Crush</a></td>
 	</tbody>
 </table>
