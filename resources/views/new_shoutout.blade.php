@@ -1,13 +1,6 @@
 
+<h1>{{$shoutout}}</h1>
 
-
-@if($text == "gwapo")
-	<h1>Gwapo</h1>
-
-@elseif($text == "gwapa")
-	<h1>Gwapa</h1>
-
-@endif
 <table border = "100">
 	<th>#</th>
 	<th>COLOR</th>
